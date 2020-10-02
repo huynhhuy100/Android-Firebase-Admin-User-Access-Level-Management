@@ -95,9 +95,10 @@ public class Register extends AppCompatActivity {
                             Map<String, Object> userInfo = new HashMap<>();
                             userInfo.put("FullName", fullName.getText().toString());
                             userInfo.put("UserEmail", email.getText().toString());
+                            userInfo.put("Password", password.getText().toString());
                             userInfo.put("Phone", phone.getText().toString());
                             //specity if the user is Admin
-                            userInfo.put("isUser", "1");
+                            userInfo.put("isStudent", "1");
                             if (isTeacherBox.isChecked()){
 //                                userInfo.put("isTeacher", "1");
                                 userInfo.put("isTeacher", "1");
@@ -107,7 +108,6 @@ public class Register extends AppCompatActivity {
                             }
 
                             df.set(userInfo);
-
                             startActivity(new Intent(getApplicationContext(), UsersActivity.class));
                             finish();
                         }

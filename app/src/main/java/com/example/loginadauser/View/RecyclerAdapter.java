@@ -40,7 +40,7 @@ public  class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recyc
         holder.dateTextView.setText(getDateToday());
         Picasso.get()
                 .load(currentTeacher.getImageUrl())
-                .placeholder(R.drawable.logo)
+                .placeholder(R.drawable.bg)
                 .fit()
                 .centerCrop()
                 .into(holder.teacherImageView);
